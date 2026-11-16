@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extortion Case Hub</title>
+<meta name="description" content="A private AI Skill for the UGREEN AI NAS that turns extortion threats against bus companies into hash-verified reports the police can use.">
+<meta property="og:title" content="Extortion Case Hub">
+<meta property="og:description" content="Evidence in. Verifiable facts out. An AI Skill for the UGREEN AI NAS.">
+<meta property="og:image" content="https://cesar-stich.github.io/extortion-case-hub-/assets/cover.png">
+<meta name="theme-color" content="#000000">
+<style>
+:root{--bg:#000;--p:#0b0b0e;--p2:#111116;--ln:#24242c;--t:#f2f2f5;--m:#9b9ba8;--d:#6a6a77;--red:#ff4d4f;--sky:#5aa9ff;--amb:#ffb020;--grn:#35d08a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(900px 500px at 85% -5%,rgba(255,77,79,.16),transparent 60%),radial-gradient(700px 420px at 0% 10%,rgba(90,169,255,.08),transparent 60%);pointer-events:none;z-index:-1}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:5;backdrop-filter:blur(10px);background:rgba(0,0,0,.65);border-bottom:1px solid var(--ln)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:58px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.3px}
+.brand i{width:26px;height:26px;border-radius:7px;background:linear-gradient(145deg,#ff4d4f,#9b1c24);display:inline-block}
+nav .links{display:flex;gap:22px;font-size:14px;color:var(--m)}
+nav .links a{text-decoration:none}nav .links a:hover{color:var(--t)}
+.hero{padding:86px 0 54px;text-align:center}
+.tag{display:inline-block;font-size:12px;letter-spacing:2.4px;font-weight:700;color:var(--m);border:1px solid var(--ln);border-radius:999px;padding:7px 16px;background:rgba(255,255,255,.03)}
+h1{font-size:clamp(44px,8vw,88px);letter-spacing:-3px;line-height:1;margin:26px 0 16px;font-weight:700}
+h1 span{color:var(--red)}
+.lead{font-size:clamp(18px,2.4vw,24px);color:#c3c3ce;max-width:760px;margin:0 auto}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:15px;padding:13px 22px;border-radius:12px;border:1px solid var(--ln);background:var(--p2)}
+.btn.main{background:var(--red);border-color:var(--red);color:#fff}
+.btn:hover{filter:brightness(1.15)}
+section{padding:56px 0}
+h2{font-size:clamp(28px,4vw,40px);letter-spacing:-1.2px;margin-bottom:8px}
+.sub{color:var(--m);font-size:18px;max-width:760px;margin-bottom:30px}
+.eyebrow{font-size:12px;letter-spacing:2.2px;font-weight:700;color:var(--red);margin-bottom:10px}
+.video{position:relative;aspect-ratio:16/9;border:1px solid var(--ln);border-radius:18px;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.8),0 0 120px rgba(255,77,79,.10)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.note{font-size:13px;color:var(--d);margin-top:12px;text-align:center}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--p);border:1px solid var(--ln);border-radius:16px;padding:22px}
+.stat b{display:block;font-size:44px;letter-spacing:-1.5px;line-height:1.1}
+.stat span{color:var(--m);font-size:15px}
+.stat small{display:block;color:var(--d);font-size:12px;margin-top:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,77,79,.15);color:var(--red);margin-bottom:14px}
+.card h3{font-size:19px;margin-bottom:6px;letter-spacing:-.3px}
+.card p{color:var(--m);font-size:15px}
+.tagline{font-size:11px;letter-spacing:1.4px;font-weight:700;color:var(--grn);margin-bottom:8px}
+.shot{border:1px solid var(--ln);border-radius:16px;overflow:hidden;background:var(--p);margin-bottom:22px}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{padding:14px 18px;color:var(--m);font-size:14px;border-top:1px solid var(--ln)}
+.lad{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.lv{border:1px solid var(--ln);border-radius:14px;padding:18px;background:var(--p)}
+.lv i{font-style:normal;display:grid;place-items:center;width:34px;height:34px;border-radius:9px;font-weight:800;color:#0a0a0c;margin-bottom:12px}
+.lv b{display:block;margin-bottom:4px}.lv span{color:var(--m);font-size:14px}
+.never{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.never li{display:flex;gap:12px;align-items:flex-start;background:var(--p);border:1px solid var(--ln);border-radius:12px;padding:14px 16px;color:#d6d6de}
+.never li::before{content:"✕";color:var(--red);font-weight:800}
+.honest{border:1px solid rgba(255,176,32,.45);background:rgba(255,176,32,.05);border-radius:16px;padding:22px}
+.honest b{color:var(--amb);letter-spacing:1.4px;font-size:12px}
+.honest p{margin-top:8px;color:#d6d6de}
+footer{border-top:1px solid var(--ln);padding:34px 0 50px;color:var(--d);font-size:14px;text-align:center}
+footer a{color:var(--m)}
+@media(max-width:860px){.stats,.grid3,.grid4,.lad,.never{grid-template-columns:1fr 1fr}nav .links{display:none}}
+@media(max-width:560px){.stats,.grid3,.grid4,.lad,.never{grid-template-columns:1fr}.hero{padding-top:56px}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><div class="brand"><i></i>Extortion Case Hub</div>
+<div class="links"><a href="#demo">Demo</a><a href="#how">How it works</a><a href="#reports">Reports</a><a href="#limits">Limits</a><a href="https://github.com/cesar-stich/extortion-case-hub-">GitHub</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<span class="tag">UGREEN HACKATHON 2026 · AI NAS · AUTOMATE YOUR WORKFLOW</span>
+<h1>Extortion Case <span>Hub</span></h1>
+<p class="lead">A private AI Skill that turns the extortion threats bus drivers receive into hash-verified reports the police can use. Evidence in. Verifiable facts out.</p>
+<div class="cta"><a class="btn main" href="#demo">Watch the 2-minute demo</a><a class="btn" href="https://github.com/cesar-stich/extortion-case-hub-">View the repository</a><a class="btn" href="https://github.com/cesar-stich/extortion-case-hub-/blob/main/Extortion-Case-Hub_Round1-Proposal.pdf">Proposal (PDF)</a></div>
+</div></header>
+
+<section id="demo"><div class="wrap">
+<div class="eyebrow">THE DEMO</div>
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/JxxjrwvxM5M" title="Extortion Case Hub demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p class="note">Illustrative animation with synthetic data. The narration is an AI-generated voice.</p>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">THE PROBLEM</div>
+<h2>Bus companies pay to stay alive.</h2>
+<p class="sub">In Lima and Callao, gangs charge a daily "cupo" per bus. The threats arrive as voice notes from disposable numbers. Drivers delete them out of fear, and the police receive loose files they cannot verify or connect.</p>
+<div class="stats">
+<div class="card stat"><b>26,585</b><span>extortion complaints in Peru in 2025</span><small>INEI with National Police data, via Exitosa Noticias</small></div>
+<div class="card stat"><b style="color:var(--red)">~80%</b><span>of about 400 bus companies in Lima and Callao are extorted, often by several gangs</span><small>Transport leaders in broadcast interviews</small></div>
+<div class="card stat"><b>20</b><span>sentences from more than 85,000 complaints in five years</span><small>Caretas</small></div>
+</div></div></section>
+
+<section id="how"><div class="wrap">
+<div class="eyebrow">HOW IT WORKS</div>
+<h2>The company keeps its own evidence.</h2>
+<p class="sub">The company runs a UGREEN AI NAS at its depot. Our Skill is the conductor: it hands each job to the NAS's own expert agents, all read-only on the originals.</p>
+<div class="grid3">
+<div class="card step"><b>1</b><h3>Drivers back up</h3><p>Phones copy threats, screenshots and payment captures into a private folder per driver, over the depot Wi-Fi.</p></div>
+<div class="card step"><b>2</b><h3>The Skill reads</h3><p>Five NAS experts inventory files, read screenshots, transcribe Spanish voice notes, read chats and the route, and link camera events.</p></div>
+<div class="card step"><b>3</b><h3>Reports come out</h3><p>Every file gets a SHA-256 fingerprint. Reports show matches between drivers, escalation and what could not be read.</p></div>
+</div></div></section>
+
+<section id="reports"><div class="wrap">
+<div class="eyebrow">WHAT YOU GET</div>
+<h2>Four outputs, one source of truth.</h2>
+<p class="sub">&nbsp;</p>
+<div class="grid4">
+<div class="card"><div class="tagline">FOR THE POLICE COMPLAINT</div><h3>Driver report</h3><p>Timeline, verbatim threats, indicators, cupos paid and a SHA-256 evidence index.</p></div>
+<div class="card"><div class="tagline">FOR THE COMPANY</div><h3>Company report</h3><p>Matches between drivers, an escalation level for each, total paid and incidents per route segment.</p></div>
+<div class="card"><div class="tagline">FOR OTHER COMPANIES</div><h3>Indicator file</h3><p>Anonymized accounts, file fingerprints and aliases to cross-check. No names, no files.</p></div>
+<div class="card"><div class="tagline">EVERY WEEK</div><h3>Update mode</h3><p>Only what is new since the previous report, so nothing is reprocessed.</p></div>
+</div>
+<div style="height:26px"></div>
+<figure class="shot"><img src="assets/driver-report.png" alt="Driver report mockup" loading="lazy"><figcaption>One driver's report: timeline, indicators and the evidence index. Illustrative mockup, synthetic data.</figcaption></figure>
+<figure class="shot"><img src="assets/cross-member-matches.png" alt="Cross-member matches mockup" loading="lazy"><figcaption>Matches between drivers: same account, same file, same alias, graded strong or medium. Illustrative mockup, synthetic data.</figcaption></figure>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">ESCALATION</div>
+<h2>Four levels, always backed by evidence.</h2>
+<p class="sub">Each level is shown with the quote or image that justifies it. Facts only, no predictions.</p>
+<div class="lad">
+<div class="lv"><i style="background:#8cc2ff">1</i><b>Demand</b><span>A request for money, without explicit violence.</span></div>
+<div class="lv"><i style="background:var(--amb)">2</i><b>Personal pressure</b><span>Mentions the plate, route, schedule, family or home.</span></div>
+<div class="lv"><i style="background:#ff7a3d">3</i><b>Violence threat</b><span>Threatens death, injury, fire or shooting.</span></div>
+<div class="lv"><i style="background:var(--red)">4</i><b>Physical act</b><span>Shots, a damaged bus, a note left in person.</span></div>
+</div></div></section>
+
+<section id="limits"><div class="wrap">
+<div class="eyebrow">HARD LIMITS</div>
+<h2>A match is a fact, not a conclusion.</h2>
+<p class="sub">That judgment belongs to the police and the prosecutor.</p>
+<ul class="never">
+<li>Never names or identifies suspects</li><li>Never contacts anyone</li>
+<li>Never advises paying, negotiating or confronting</li><li>Never files the complaint</li>
+<li>Never edits, moves or deletes an original file</li><li>Never invents what it could not read</li>
+</ul>
+<div style="height:26px"></div>
+<div class="honest"><b>HONEST STATUS</b><p>The Skill package passes the official validator with 0 errors and 0 warnings. It has <strong>not yet run on a real NAS</strong>; testing it there is the next step. The demo and the images are illustrative, with synthetic data.</p></div>
+</div></section>
+
+<footer><div class="wrap">Built for the UGREEN Hackathon 2026 on AI NAS ·
+<a href="https://github.com/cesar-stich/extortion-case-hub-">GitHub</a> ·
+<a href="https://www.youtube.com/watch?v=JxxjrwvxM5M">YouTube</a> ·
+<a href="https://github.com/cesar-stich/extortion-case-hub-/blob/main/Extortion-Case-Hub_Round1-Proposal.pdf">Proposal</a></div></footer>
+</body></html>
